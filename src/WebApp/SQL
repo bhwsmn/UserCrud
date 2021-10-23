@@ -1,0 +1,17 @@
+﻿CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+
+CREATE TABLE "Users" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+    "FirstName" TEXT NULL,
+    "LastName" TEXT NULL,
+    "EmailId" TEXT NULL,
+    "Address" TEXT NULL,
+    "DateOfBirth" TEXT NOT NULL
+);
+
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20211023052726_Init', '3.1.20');
+
